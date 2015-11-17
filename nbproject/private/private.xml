@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/bsforcs/BSforCSCard.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>47</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/BSforCSDeck.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/BSforCSFrame.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/BSforCSMain.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/BSforCSPlayer.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/BSforCSRoom.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/BSforCSCard.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/TokenChooser.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card3.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card8.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card10.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card11.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card12.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card17.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card24.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card25.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card26.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card27.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card28.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card30.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card31.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card32.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card33.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card35.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card36.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card37.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card39.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card13.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card14.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card15.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card16.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card18.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card19.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card2.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card20.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card21.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card22.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card23.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card29.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card34.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card38.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card4.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card5.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card6.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card7.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card9.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/Card1.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/ImageLabel.java</file>
+            <file>file:/C:/Users/Dustin/Documents/GitHub/cecs343-BSforCS/src/bsforcs/DeckHolder.java</file>
+        </group>
+    </open-files>
+</project-private>
