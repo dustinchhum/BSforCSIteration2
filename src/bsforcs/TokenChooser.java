@@ -5,8 +5,10 @@
  */
 package bsforcs;
 
+import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -19,17 +21,47 @@ import javax.swing.JPanel;
  * @author Dustin
  */
 public class TokenChooser extends JDialog {
-   JFrame frame = new JFrame();
-   JPanel buttonPanel = new JPanel();
-   JTextArea text = new JTextArea();
+   JFrame frame;
+   JPanel buttonPanel;
+   JPanel bigPanel;
+   JTextField text;
    JButton learning, craft, integrity;
-   Image image;
+   
+   private final Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
    // Learning, Craft, Integrity 
    public TokenChooser(boolean l, boolean c, boolean i, final BSforCSPlayer player) {
       
-      buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.X_AXIS));
-      text.setText("Choose a Skill Chip");
-      buttonPanel.setSize(new Dimension(920, 240));
+      frame = new JFrame("Token Chooser");
+      buttonPanel = new JPanel();
+      text = new JTextField();
+      bigPanel = new JPanel();
+      
+      
+      frame.setMinimumSize(new Dimension(225, 150));
+      frame.setAlwaysOnTop(true);
+      frame.setLocation(dim.width / 2 - frame.getSize().width / 2 , 
+       dim.height / 2 - frame.getSize().height / 2);
+      frame.setUndecorated(true);
+      //frame.getRootPane().setWindowDecorationStyle(JRootPane.NONE);
+      
+      bigPanel.setLayout(new BoxLayout(bigPanel, BoxLayout.PAGE_AXIS));
+      
+ 
+      //buttonPanel.setPreferredSize(new Dimension(300, 150));
+      buttonPanel.setLayout(new BorderLayout());
+      
+      buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.LINE_AXIS));
+      buttonPanel.setVisible(true);
+      //buttonPanel.setSize(new Dimension(350, 150));
+      
+      text.setText("Choose a Skill Chip!");
+      text.setEditable(false);
+      text.setVisible(true);
+      text.setHorizontalAlignment(JTextField.CENTER);
+      //text.setMinimumSize(new Dimension(225, 50));
+      bigPanel.add(text);
+      
+     
       learning = new JButton("Learning");
       craft = new JButton("Craft");
       integrity = new JButton("Integrity");
@@ -41,13 +73,11 @@ public class TokenChooser extends JDialog {
       integrity.setVerticalTextPosition(AbstractButton.BOTTOM);
       integrity.setHorizontalTextPosition(AbstractButton.CENTER);
       
-      buttonPanel.add(learning);
-      buttonPanel.add(craft);
-      buttonPanel.add(integrity);
       
-      frame.add(buttonPanel);
-      frame.setMinimumSize(new Dimension(300, 200));
-      
+      buttonPanel.add(learning, BorderLayout.WEST);
+      buttonPanel.add(craft, BorderLayout.CENTER);
+      buttonPanel.add(integrity, BorderLayout.EAST);
+
       if (!l) {
          this.learning.setEnabled(false);
       }
@@ -57,15 +87,18 @@ public class TokenChooser extends JDialog {
       if (!i) {
          this.craft.setEnabled(false);
       }
+      bigPanel.add(buttonPanel);
       
-      pack();
-      setVisible(true); 
+      frame.add(bigPanel);
+      frame.pack();
+      //frame.setLocation(null);
+      frame.setVisible(true);
       
       learning.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent ae) {
             player.addLearning(1);
-            dispose();
+            frame.dispose();
          }
       });
       
@@ -73,7 +106,7 @@ public class TokenChooser extends JDialog {
          @Override
          public void actionPerformed(ActionEvent ae) {
             player.addCraft(1);
-            dispose();
+            frame.dispose();
          }
       });
       
@@ -81,7 +114,7 @@ public class TokenChooser extends JDialog {
          @Override
          public void actionPerformed(ActionEvent ae) {
             player.addIntegrity(1);
-            dispose();
+            frame.dispose();
          }
       });  
    }
