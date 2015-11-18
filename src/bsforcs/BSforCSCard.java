@@ -62,7 +62,7 @@ public class BSforCSCard {
       return roomLocations;
    }
    
-   public void setLocationOfCard(int i) {
+   public void AddLocationOfCard(int i) {
       roomLocations.add(i);
    }
 }

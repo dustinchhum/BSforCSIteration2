@@ -88,6 +88,46 @@ public class BSforCSDeck {
       
       Collections.shuffle(playable);  
    }
+
+   public void shuffle(ArrayList<BSforCSCard> array) {
+      Collections.shuffle(array);
+   }
+   
+   public void dealToPlayers(BSforCSPlayer player) {
+      Collections.shuffle(playable);
+      for (int i = 0; i < 5; i++) {
+         //int index = playable.size() - 1;
+         BSforCSCard card = playable.get(i);
+         player.getHand().add(card);
+         playable.remove(i);
+      }
+   }
+   
+   public void drawCard(BSforCSPlayer player) {
+      if (playable.isEmpty()) {
+         for (int i = 0; i < discard.size(); i++) {
+            playable.add(discard.get(i));
+            discard.remove(discard.get(i));
+         }
+      }
+      Collections.shuffle(playable);
+      player.getHand().add(playable.get(0));
+      playable.remove(playable.get(0));
+   }
+   
+   public void addToDiscardDeck(BSforCSCard card) {
+      discard.add(card);
+      // Code dialog chooser to discard a card
+   }
+   
+   public ArrayList<BSforCSCard> getPlayableDeck() {
+      return playable;
+   }
+   
+   public ArrayList<BSforCSCard> getDiscardDeck() {
+      return discard;
+   }
+   
     
    private void addCardsToDeck() {
       playable.add(Card1);
@@ -131,79 +171,121 @@ public class BSforCSDeck {
       playable.add(Card39);
    }
    
+    
    private void setAllLocations() {
-      Card1.setLocationOfCard(ECS302);
-      Card1.setLocationOfCard(ECS308);
+      Card1.AddLocationOfCard(ECS302);
+      Card1.AddLocationOfCard(ECS308);
       
-      Card2.setLocationOfCard(LIBRARY);
-      Card3.setLocationOfCard(LIBRARY);
-      Card4.setLocationOfCard(ECS302);
-      Card5.setLocationOfCard(BRATWURST_HALL);
-      Card6.setLocationOfCard(ECS308);
-      Card7.setLocationOfCard(REC_CENTER);
+      Card2.AddLocationOfCard(LIBRARY);
+      Card3.AddLocationOfCard(LIBRARY);
+      Card4.AddLocationOfCard(ECS302);
+      Card5.AddLocationOfCard(BRATWURST_HALL);
+      Card6.AddLocationOfCard(ECS308);
+      Card7.AddLocationOfCard(REC_CENTER);
       
-      Card8.setLocationOfCard(FORBIDDEN);
-      Card8.setLocationOfCard(FIELD);
+      Card8.AddLocationOfCard(FORBIDDEN);
+      Card8.AddLocationOfCard(FIELD);
       
-      Card9.setLocationOfCard(FIELD);
-      Card9.setLocationOfCard(GARDEN);
-      Card9.setLocationOfCard(STUDENT_PARKING);
-      Card9.setLocationOfCard(PYRAMID);
-      Card9.setLocationOfCard(WESTWALK);
-      Card9.setLocationOfCard(LIBRARY);
-      Card9.setLocationOfCard(LA5);
-      Card9.setLocationOfCard(BRATWURST_HALL);
-      Card9.setLocationOfCard(EASTWALK);
-      Card9.setLocationOfCard(COMP_LAB);
-      Card9.setLocationOfCard(NORTH_HALL);
-      Card9.setLocationOfCard(ROOM_OF_RETIREMENT);
-      Card9.setLocationOfCard(ECS302);
-      Card9.setLocationOfCard(SOUTH_HALL);
-      Card9.setLocationOfCard(ELEVATORS);
-      Card9.setLocationOfCard(ECS308);
-      Card9.setLocationOfCard(EAT);
-      Card9.setLocationOfCard(CONFERENCE);
-      Card9.setLocationOfCard(LACTATION);
+      Card13.AddLocationOfCard(FIELD);
+      Card13.AddLocationOfCard(GARDEN);
+      Card13.AddLocationOfCard(STUDENT_PARKING);
+      Card13.AddLocationOfCard(PYRAMID);
+      Card13.AddLocationOfCard(WESTWALK);
+      Card13.AddLocationOfCard(LIBRARY);
+      Card13.AddLocationOfCard(LA5);
+      Card13.AddLocationOfCard(BRATWURST_HALL);
+      Card13.AddLocationOfCard(EASTWALK);
+      Card13.AddLocationOfCard(COMP_LAB);
+      Card13.AddLocationOfCard(NORTH_HALL);
+      Card13.AddLocationOfCard(ROOM_OF_RETIREMENT);
+      Card13.AddLocationOfCard(ECS302);
+      Card13.AddLocationOfCard(SOUTH_HALL);
+      Card13.AddLocationOfCard(ELEVATORS);
+      Card13.AddLocationOfCard(ECS308);
+      Card13.AddLocationOfCard(EAT);
+      Card13.AddLocationOfCard(CONFERENCE);
+      Card13.AddLocationOfCard(LACTATION);
       
-      Card10.setLocationOfCard(ROOM_OF_RETIREMENT);
-      Card11.setLocationOfCard(GARDEN);
+      Card9.AddLocationOfCard(ELEVATORS);
+      Card10.AddLocationOfCard(ROOM_OF_RETIREMENT);
+      Card11.AddLocationOfCard(GARDEN);
+      Card15.AddLocationOfCard(PYRAMID);
+      Card16.AddLocationOfCard(FIELD);
+      
+      Card17.AddLocationOfCard(ECS302);
+      Card17.AddLocationOfCard(ECS308);
+      
+      Card18.AddLocationOfCard(LACTATION);
+      Card19.AddLocationOfCard(CONFERENCE);
+      Card22.AddLocationOfCard(GARDEN);
+      Card23.AddLocationOfCard(NORTH_HALL);
+      Card23.AddLocationOfCard(SOUTH_HALL);
+      Card24.AddLocationOfCard(COMP_LAB);
+      
+      Card25.AddLocationOfCard(SOUTH_HALL);
+      Card25.AddLocationOfCard(NORTH_HALL);
+      
+      Card26.AddLocationOfCard(EAT);
+      Card27.AddLocationOfCard(LACTATION);
+      Card28.AddLocationOfCard(CONFERENCE);
+      Card29.AddLocationOfCard(ELEVATORS);
+      Card30.AddLocationOfCard(FIELD);
+      Card31.AddLocationOfCard(LIBRARY);
+      
+      Card32.AddLocationOfCard(FIELD);
+      Card32.AddLocationOfCard(GARDEN);
+      Card32.AddLocationOfCard(STUDENT_PARKING);
+      Card32.AddLocationOfCard(PYRAMID);
+      Card32.AddLocationOfCard(WESTWALK);
+      Card32.AddLocationOfCard(FORBIDDEN);
+      Card32.AddLocationOfCard(LIBRARY);
+      Card32.AddLocationOfCard(BRATWURST_HALL);
+      Card32.AddLocationOfCard(EASTWALK);
+      
+      Card33.AddLocationOfCard(COMP_LAB);
+      Card33.AddLocationOfCard(NORTH_HALL);
+      Card33.AddLocationOfCard(ROOM_OF_RETIREMENT);
+      Card33.AddLocationOfCard(ECS302);
+      Card33.AddLocationOfCard(SOUTH_HALL);
+      Card33.AddLocationOfCard(ELEVATORS);
+      Card33.AddLocationOfCard(ECS308);
+      Card33.AddLocationOfCard(EAT);
+      Card33.AddLocationOfCard(CONFERENCE);
+      Card33.AddLocationOfCard(LACTATION);
+      
+      Card34.AddLocationOfCard(FIELD);
+      Card34.AddLocationOfCard(GARDEN);
+      Card34.AddLocationOfCard(STUDENT_PARKING);
+      Card34.AddLocationOfCard(PYRAMID);
+      Card34.AddLocationOfCard(WESTWALK);
+      Card34.AddLocationOfCard(FORBIDDEN);
+      Card34.AddLocationOfCard(LIBRARY);
+      Card34.AddLocationOfCard(BRATWURST_HALL);
+      Card34.AddLocationOfCard(EASTWALK);
+      
+      Card35.AddLocationOfCard(FIELD);
+      Card35.AddLocationOfCard(GARDEN);
+      Card35.AddLocationOfCard(STUDENT_PARKING);
+      Card35.AddLocationOfCard(PYRAMID);
+      Card35.AddLocationOfCard(WESTWALK);
+      Card35.AddLocationOfCard(LIBRARY);
+      Card35.AddLocationOfCard(BRATWURST_HALL);
+      Card35.AddLocationOfCard(EASTWALK);
+      
+      Card36.AddLocationOfCard(COMP_LAB);
+      Card37.AddLocationOfCard(NORTH_HALL);
+      Card38.AddLocationOfCard(SOUTH_HALL);
+      
+      Card38.AddLocationOfCard(FIELD);
+      Card38.AddLocationOfCard(GARDEN);
+      Card38.AddLocationOfCard(STUDENT_PARKING);
+      Card38.AddLocationOfCard(PYRAMID);
+      Card38.AddLocationOfCard(WESTWALK);
+      Card38.AddLocationOfCard(FORBIDDEN);
+      Card38.AddLocationOfCard(LIBRARY);
+      Card38.AddLocationOfCard(BRATWURST_HALL);
+      Card38.AddLocationOfCard(EASTWALK);
+      
+      Card39.AddLocationOfCard(STUDENT_PARKING);
    }
-   public void shuffle(ArrayList<BSforCSCard> array) {
-      Collections.shuffle(array);
-   }
-   
-   public void dealToPlayers(BSforCSPlayer player) {
-      Collections.shuffle(playable);
-      for (int i = 0; i < 5; i++) {
-         //int index = playable.size() - 1;
-         BSforCSCard card = playable.get(i);
-         player.getHand().add(card);
-         playable.remove(i);
-      }
-   }
-   
-   public void drawCard(BSforCSPlayer player) {
-      if (playable.isEmpty()) {
-         for (int i = 0; i < discard.size(); i++) {
-            playable.add(discard.get(i));
-            discard.remove(discard.get(i));
-         }
-      }
-      Collections.shuffle(playable);
-      player.getHand().add(playable.get(0));
-      playable.remove(playable.get(0));
-   }
-   
-   public void addToDiscardDeck(BSforCSCard card) {
-      discard.add(card);
-      // Code dialog chooser to discard a card
-   }
-   
-   public ArrayList<BSforCSCard> getPlayableDeck() {
-      return playable;
-   }
-   
-   public ArrayList<BSforCSCard> getDiscardDeck() {
-      return discard;
-   }   
 }
