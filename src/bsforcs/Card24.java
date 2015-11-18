@@ -18,12 +18,21 @@ public class Card24 extends BSforCSCard {
    public void play(BSforCSPlayer p) {
       int room = p.getCurrentRoom().getRoomNumber();
       if (p.getIntegrity() < 4) {
-         p.minusQualityPoints(2);
-         // code discard mechanic
+         p.minusQualityPoints(2); 
+         if (p.isHuman()) {
+            discard = new DiscardChooser(p);
+         }
       }
       else if (room == 11) {
          p.addQualityPoints(3);
-         token = new TokenChooser(true, true, true, p);
+         if (p.isHuman()) {
+            // Learning, Craft, Integrity
+            token = new TokenChooser(true, true, true, p);
+         }
+         else {
+            //AI
+            p.addIntegrity(1);
+         }
       }
       else {
          p.minusQualityPoints(2);

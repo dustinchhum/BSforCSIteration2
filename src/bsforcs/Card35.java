@@ -19,7 +19,14 @@ public class Card35 extends BSforCSCard {
       if (room != 11 && room != 12 && room != 13 && room != 14 
        && room != 15 && room != 16 && room != 17 && room != 18 && room != 19 
        && room != 20) {
-         token = new TokenChooser(true, true, true, p);
+         if (p.isHuman()) {
+            // Learning, Craft, Integrity
+            token = new TokenChooser(true, true, true, p);
+         }
+         else {
+            //AI
+            p.addLearning(1);
+         }
       }
       else {
          p.minusQualityPoints(2);

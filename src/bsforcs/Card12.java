@@ -18,7 +18,14 @@ public class Card12 extends BSforCSCard {
    public void play(BSforCSPlayer p) {
       int room = p.getCurrentRoom().getRoomNumber();
       if (room == 0 || room == 18) {
-         token = new TokenChooser(true, true, false, p);
+         if (p.isHuman()) {
+            // Learning, Craft, Integrity
+            token = new TokenChooser(true, true, false, p);
+         }
+         else {
+            //AI
+            p.addCraft(1);
+         }
       }
       else {
          p.minusQualityPoints(2);

@@ -19,7 +19,10 @@ public class Card10 extends BSforCSCard {
       int room = p.getCurrentRoom().getRoomNumber();
       if (p.getLearning() < 6 || p.getCraft() < 6 || p.getIntegrity() < 6) {
          p.minusQualityPoints(2);
-         // Code discard one card
+         if (p.isHuman()) {
+            discard = new DiscardChooser(p);
+         }
+         
       }
       else if (room == 13) {
          p.addQualityPoints(10);

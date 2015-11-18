@@ -19,13 +19,17 @@ public class Card32 extends BSforCSCard {
       int room = p.getCurrentRoom().getRoomNumber();
       if (p.getIntegrity() < 5) {
          p.minusQualityPoints(2);
-         // code for discard a card
+         if (p.isHuman()) {
+            discard = new DiscardChooser(p);
+         }
       }
       else if (room != 11 && room != 12 && room != 13 && room != 14 
        && room != 15 && room != 16 && room != 17 && room != 18 && room != 19 
        && room != 20) {
           p.addQualityPoints(4);
-          // code dialog chooser for all three chips
+          if (p.isHuman()) {
+            token = new TokenChooser(true, true, true,p);
+         }
       }
       else {
          p.minusQualityPoints(2);

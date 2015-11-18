@@ -21,7 +21,14 @@ public class Card26 extends BSforCSCard {
          p.minusQualityPoints(4);
       }
       else if (room == 18) {
-         token = new TokenChooser(true, true, true, p);
+         if (p.isHuman()) {
+            // Learning, Craft, Integrity
+            token = new TokenChooser(true, true, true, p);
+         }
+         else {
+            //AI
+            p.addLearning(1);
+         }
       }
       else {
          p.minusQualityPoints(2);

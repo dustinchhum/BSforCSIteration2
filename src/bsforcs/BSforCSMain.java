@@ -89,7 +89,7 @@ public class BSforCSMain
       //human.setMoves(3);
       System.out.println("Current Player: " + board.getPlayer().getName());
       //board.moveButton();
-      TokenChooser t = new TokenChooser(true, false, true, human);
+      DiscardChooser d = new DiscardChooser(human);
       //System.out.println("Player in Current Player: " + board.currentPlayer.getName());  
       while(board.deck.getPlayableDeck().size() > 0)
       {

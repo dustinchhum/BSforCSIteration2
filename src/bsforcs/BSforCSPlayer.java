@@ -1,6 +1,7 @@
 package bsforcs;
 
 import java.util.ArrayList;
+import java.util.Random;
 import javax.swing.*;
 
 public class BSforCSPlayer extends BSforCSFrame
@@ -18,6 +19,7 @@ public class BSforCSPlayer extends BSforCSFrame
    private int movesLeft = 3;
    private boolean drawCard = false;
    private boolean playCard = false;
+   private Random rand;
 	
 	public BSforCSPlayer(String playerName, int l, int i, int c)
 	{
@@ -95,6 +97,11 @@ public class BSforCSPlayer extends BSforCSFrame
    public void draw() {
       deck.drawCard(this);
    }
+   
+   public void discardACard(BSforCSCard card) {
+      deck.addToDiscardDeck(card);
+   }
+   
    /**
     * @return the learning
     */

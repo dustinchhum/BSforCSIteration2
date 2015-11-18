@@ -19,7 +19,9 @@ public class Card25 extends BSforCSCard {
       int room = p.getCurrentRoom().getRoomNumber();
       if (p.getLearning() < 3 || p.getCraft() < 3 || p.getIntegrity()< 3) {
          p.minusQualityPoints(2);
-         // code discard a game card
+         if (p.isHuman()) {
+            discard = new DiscardChooser(p);
+         }
       }
       else if (room == 12 || room == 15) {
           p.addQualityPoints(5);

@@ -19,11 +19,20 @@ public class Card27 extends BSforCSCard {
       int room = p.getCurrentRoom().getRoomNumber();
       if (p.getLearning() < 2) {
          p.minusQualityPoints(2);
-         // code discard a game card
+         if (p.isHuman()) {
+            discard = new DiscardChooser(p);
+         }
       }
       else if (room == 20) {
           p.addQualityPoints(5);
-          token = new TokenChooser(true, true, true, p);
+          if (p.isHuman()) {
+            // Learning, Craft, Integrity
+            token = new TokenChooser(true, true, true, p);
+         }
+         else {
+            //AI
+            p.addCraft(1);
+         }
       }
       else {
          p.minusQualityPoints(2);      

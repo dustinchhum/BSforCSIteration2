@@ -8,6 +8,7 @@ package bsforcs;
 import java.awt.Image;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -21,13 +22,16 @@ public class BSforCSCard {
    private Image img = null;
    public String mReward;
    public String mPunishment;
-   public TokenChooser token; 
+   public TokenChooser token;
+   public DiscardChooser discard;
+   public ArrayList<Integer> roomLocations;
    
    public BSforCSCard(String name, int id, String URL, String reward, String punishment) {
       mName = name;
       mID = id;
       mReward = reward;
       mPunishment = punishment;
+      roomLocations = new ArrayList<>();
       try {                
          img = ImageIO.read(new File(URL));
       } 
@@ -52,5 +56,13 @@ public class BSforCSCard {
    @Override
    public String toString() {
       return mName;
+   }
+   
+   public ArrayList<Integer> AIgetListOfRoomsPlayableCard() {
+      return roomLocations;
+   }
+   
+   public void setLocationOfCard(int i) {
+      roomLocations.add(i);
    }
 }

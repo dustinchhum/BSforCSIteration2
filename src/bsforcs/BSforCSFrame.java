@@ -429,7 +429,7 @@ public class BSforCSFrame extends JFrame
             selectedCard.play(currentPlayer);
             System.out.println("Card: " + selectedCard.toString());
             hand.remove(selectedCard);
-            deck.discardCard(selectedCard);
+            deck.addToDiscardDeck(selectedCard);
             label.setIcon(null);
             setImageToCardUI(hand.get(1).getImage());
             

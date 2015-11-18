@@ -19,7 +19,14 @@ public class Card3 extends BSforCSCard {
    public void play(BSforCSPlayer player) {
       int room = player.getCurrentRoom().getRoomNumber();
       if (room == 7) {
-         token = new TokenChooser(true, false, true, player);
+         if (player.isHuman()) {
+            // Learning, Craft, Integrity
+            token = new TokenChooser(true, false, true, player);
+         }
+         else {
+            //AI
+            player.addLearning(1);
+         }
       }
       else {
          player.minusQualityPoints(2);

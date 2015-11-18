@@ -17,6 +17,28 @@ public class BSforCSDeck {
    public ArrayList<BSforCSCard> playable;
    public ArrayList<BSforCSCard> discard;
    
+   public final int FIELD = 0;
+   public final int GARDEN = 1;
+   public final int STUDENT_PARKING = 2;
+   public final int PYRAMID = 3;
+   public final int WESTWALK = 4;
+   public final int REC_CENTER = 5;
+   public final int FORBIDDEN = 6;
+   public final int LIBRARY = 5;
+   public final int LA5 = 8;
+   public final int BRATWURST_HALL = 9;
+   public final int EASTWALK = 10;
+   public final int COMP_LAB = 11;
+   public final int NORTH_HALL = 12;
+   public final int ROOM_OF_RETIREMENT = 13;
+   public final int ECS302 = 14;
+   public final int SOUTH_HALL = 15;
+   public final int ELEVATORS = 16;
+   public final int ECS308 = 17;
+   public final int EAT = 18;
+   public final int CONFERENCE = 19;
+   public final int LACTATION = 20;
+   
    public Card1 Card1 = new Card1("CECS 105", 1, "image/Card1.png", "1 Learning Chip", "-2 Quality Points");
    public Card2 Card2= new Card2("Research Compilers", 2, "image/Card2.png", "1 Learning Chip", "-2 Quality Points");
    public Card3 Card3 = new Card3("Math 122", 3, "image/Card3.png", "Get 1 Integrity Chip or 1 Learning Chip", "-2 Quality Points");
@@ -61,6 +83,13 @@ public class BSforCSDeck {
       playable = new ArrayList<>();
       discard = new ArrayList<>();
       
+      addCardsToDeck();
+      setAllLocations();
+      
+      Collections.shuffle(playable);  
+   }
+    
+   private void addCardsToDeck() {
       playable.add(Card1);
       playable.add(Card2);
       playable.add(Card3);
@@ -100,9 +129,45 @@ public class BSforCSDeck {
       playable.add(Card37);
       playable.add(Card38);
       playable.add(Card39);
-      Collections.shuffle(playable);  
    }
    
+   private void setAllLocations() {
+      Card1.setLocationOfCard(ECS302);
+      Card1.setLocationOfCard(ECS308);
+      
+      Card2.setLocationOfCard(LIBRARY);
+      Card3.setLocationOfCard(LIBRARY);
+      Card4.setLocationOfCard(ECS302);
+      Card5.setLocationOfCard(BRATWURST_HALL);
+      Card6.setLocationOfCard(ECS308);
+      Card7.setLocationOfCard(REC_CENTER);
+      
+      Card8.setLocationOfCard(FORBIDDEN);
+      Card8.setLocationOfCard(FIELD);
+      
+      Card9.setLocationOfCard(FIELD);
+      Card9.setLocationOfCard(GARDEN);
+      Card9.setLocationOfCard(STUDENT_PARKING);
+      Card9.setLocationOfCard(PYRAMID);
+      Card9.setLocationOfCard(WESTWALK);
+      Card9.setLocationOfCard(LIBRARY);
+      Card9.setLocationOfCard(LA5);
+      Card9.setLocationOfCard(BRATWURST_HALL);
+      Card9.setLocationOfCard(EASTWALK);
+      Card9.setLocationOfCard(COMP_LAB);
+      Card9.setLocationOfCard(NORTH_HALL);
+      Card9.setLocationOfCard(ROOM_OF_RETIREMENT);
+      Card9.setLocationOfCard(ECS302);
+      Card9.setLocationOfCard(SOUTH_HALL);
+      Card9.setLocationOfCard(ELEVATORS);
+      Card9.setLocationOfCard(ECS308);
+      Card9.setLocationOfCard(EAT);
+      Card9.setLocationOfCard(CONFERENCE);
+      Card9.setLocationOfCard(LACTATION);
+      
+      Card10.setLocationOfCard(ROOM_OF_RETIREMENT);
+      Card11.setLocationOfCard(GARDEN);
+   }
    public void shuffle(ArrayList<BSforCSCard> array) {
       Collections.shuffle(array);
    }
@@ -129,7 +194,7 @@ public class BSforCSDeck {
       playable.remove(playable.get(0));
    }
    
-   public void discardCard(BSforCSCard card) {
+   public void addToDiscardDeck(BSforCSCard card) {
       discard.add(card);
       // Code dialog chooser to discard a card
    }
